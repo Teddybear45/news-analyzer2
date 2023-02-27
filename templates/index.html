@@ -1,12 +1,21 @@
 <html>
 <head>
     <title>News Analyzer - Beta</title>
-
-
-
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/mainpage.css') }}">
 </head>
 <body>
+<h1 class="center-text">News Analyzer</h1>
+
+<!--central prompt and styled-->
+<!--centered div-->
+<div class="center-prompt">
+    <form method="POST">
+        <div><input class="url-input" name="url">
+        </div>
+        <div><input class="form-submit" type="submit">
+        </div>
+    </form>
+</div>
 
 
 </body>

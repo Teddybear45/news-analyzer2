@@ -1,0 +1,49 @@
+h1 {
+    font-size: 4em;
+    font-weight: bold;
+    margin: 0.67em 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.center-text {
+    text-align: center;
+}
+.center-prompt {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 10em;
+    margin-bottom: 1em;
+}
+
+/*looks like bootstrap's form*/
+.url-input {
+    width: 80%;
+    padding: 0.5em;
+    font-size: 1.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 1rem;
+}
+
+/*looks like bootstrap's button*/
+.form-submit {
+    font-size: 21px;
+    padding: 6px 12px;
+    margin-bottom: 0;
+
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+}

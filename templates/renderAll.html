@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_09f0ac2a76fa8c1693809659c631a486 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_09f0ac2a76fa8c1693809659c631a486" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_09f0ac2a76fa8c1693809659c631a486 = L.map(
+                "map_09f0ac2a76fa8c1693809659c631a486",
+                {
+                    center: [0, 0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2b4ae8f4643a2b423c121d1262707ece = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_09f0ac2a76fa8c1693809659c631a486);
+        
+    
+            var marker_cluster_8436fa5ca3a002201e222ac151145af0 = L.markerClusterGroup(
+                {"location": [38.8890009, -77.0002537], "popup": "Capitol Hill", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_8436fa5ca3a002201e222ac151145af0);
+        
+    
+            var marker_cluster_c241af5c7e4766e2517d08b21cd2237b = L.markerClusterGroup(
+                {"location": [40.7127281, -74.0060152], "popup": "New York", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_c241af5c7e4766e2517d08b21cd2237b);
+        
+    
+            var marker_cluster_d299f68743b458f7610f58215d991b02 = L.markerClusterGroup(
+                {"location": [38.8950368, -77.0365427], "popup": "Washington", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_d299f68743b458f7610f58215d991b02);
+        
+    
+            var marker_cluster_02cf4c592108ee5bc580544bdc34d185 = L.markerClusterGroup(
+                {"location": [40.74894605, -73.96808510715785], "popup": "New York City\u0027s", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_02cf4c592108ee5bc580544bdc34d185);
+        
+    
+            var marker_cluster_4fe92fa35d216a3bc6006f8c4d7b7f48 = L.markerClusterGroup(
+                {"location": [33.7911012, -118.3012604], "popup": "Harbor City", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_4fe92fa35d216a3bc6006f8c4d7b7f48);
+        
+    
+            var marker_cluster_877049cbc99cba530b6465f478504bd3 = L.markerClusterGroup(
+                {"location": [7.9631123, -11.7636869], "popup": "New York\u0027s", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_877049cbc99cba530b6465f478504bd3);
+        
+    
+            var marker_cluster_97dc259e70a084a02e45b7bc648b12ee = L.markerClusterGroup(
+                {"location": [-23.9335988, -46.3286399], "popup": "Santos", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_97dc259e70a084a02e45b7bc648b12ee);
+        
+    
+            var marker_cluster_a23d751fcd4434c1883d705140246f76 = L.markerClusterGroup(
+                {"location": [40.7135078, -73.8283132], "popup": "Queens", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_a23d751fcd4434c1883d705140246f76);
+        
+    
+            var marker_cluster_79848b0ed44c460778db649486458878 = L.markerClusterGroup(
+                {"location": [40.85149705, -73.0994258107431], "popup": "Long Island", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_79848b0ed44c460778db649486458878);
+        
+    
+            var marker_cluster_9495b90eb7832ab9d9cd2524ea48d45d = L.markerClusterGroup(
+                {"location": [-10.3333333, -53.2], "popup": "Brazil", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_9495b90eb7832ab9d9cd2524ea48d45d);
+        
+    
+            var marker_cluster_a8f91510c3482d18c51ab4419a2bc2f7 = L.markerClusterGroup(
+                {"location": [38.8950368, -77.0365427], "popup": "Washington", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_a8f91510c3482d18c51ab4419a2bc2f7);
+        
+    
+            var marker_cluster_05b66cbf083467094d6bca148564e0f3 = L.markerClusterGroup(
+                {"location": [40.7135078, -73.8283132], "popup": "Queens", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_05b66cbf083467094d6bca148564e0f3);
+        
+    
+            var marker_cluster_e113f31c032a01c539d1e38e5623da7a = L.markerClusterGroup(
+                {"location": [38.9597594, 34.9249653], "popup": "Turkey", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_e113f31c032a01c539d1e38e5623da7a);
+        
+    
+            var marker_cluster_6df332cb0a4fdd59cc0949e0edc27fa8 = L.markerClusterGroup(
+                {"location": [34.6401861, 39.0494106], "popup": "Syria", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_6df332cb0a4fdd59cc0949e0edc27fa8);
+        
+    
+            var marker_cluster_839464e42a93ba277825b3f7871e1921 = L.markerClusterGroup(
+                {"location": [29.6330078, -97.98859404468138], "popup": "the United States", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_839464e42a93ba277825b3f7871e1921);
+        
+    
+            var marker_cluster_f85c79fbca168ca3aa13dc974419bd20 = L.markerClusterGroup(
+                {"location": [45.219131, -96.635617], "popup": "Milbank", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_f85c79fbca168ca3aa13dc974419bd20);
+        
+    
+            var marker_cluster_e6adb77155389744b070dc50568332a4 = L.markerClusterGroup(
+                {"location": [38.8950368, -77.0365427], "popup": "Washington", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_e6adb77155389744b070dc50568332a4);
+        
+    
+            var marker_cluster_f9e21b09c790dcdf6d590340d97ef7c5 = L.markerClusterGroup(
+                {"location": [31.2638905, -98.5456116], "popup": "Texas", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_f9e21b09c790dcdf6d590340d97ef7c5);
+        
+    
+            var marker_cluster_ebcf17df905d83a8d0c53162a8822f09 = L.markerClusterGroup(
+                {"location": [18.4968173, -69.8908822], "popup": "Yovanny", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_ebcf17df905d83a8d0c53162a8822f09);
+        
+    
+            var marker_cluster_c3880be4b84b8e37603d3c2abb2a8b05 = L.markerClusterGroup(
+                {"location": [34.0536909, -118.242766], "popup": "Los Angeles", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_c3880be4b84b8e37603d3c2abb2a8b05);
+        
+    
+            var marker_cluster_4b5de82b6ea8839fe9e00c0db3ff48af = L.markerClusterGroup(
+                {"location": [15.5855545, -90.345759], "popup": "Guatemala", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_4b5de82b6ea8839fe9e00c0db3ff48af);
+        
+    
+            var marker_cluster_79e0ce00859e2aebe243ca4c4f065eb3 = L.markerClusterGroup(
+                {"location": [40.6526006, -73.9497211], "popup": "Brooklyn", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_79e0ce00859e2aebe243ca4c4f065eb3);
+        
+    
+            var marker_cluster_5caa55016fb94238ec92d92bce652311 = L.markerClusterGroup(
+                {"location": [22.549334, -83.8991973], "popup": "Yovany", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_5caa55016fb94238ec92d92bce652311);
+        
+    
+            var marker_cluster_c0bf0c11f6de861079b7eb215ed3d2ca = L.markerClusterGroup(
+                {"location": [48.684055799999996, 9.009657397144327], "popup": "U.S.", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_c0bf0c11f6de861079b7eb215ed3d2ca);
+        
+    
+            var marker_cluster_d858ecbbf89275b6fdd98edf005144f5 = L.markerClusterGroup(
+                {"location": [39.7837304, -100.445882], "popup": "America", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_d858ecbbf89275b6fdd98edf005144f5);
+        
+    
+            var marker_cluster_0e78bd91736bc72a37615948a076a0ec = L.markerClusterGroup(
+                {"location": [41.6500201, -72.7342163], "popup": "Connecticut", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_0e78bd91736bc72a37615948a076a0ec);
+        
+    
+            var marker_cluster_b31ccddc6fe861b4ce189968855b48ad = L.markerClusterGroup(
+                {"location": [14.6222328, -90.5185188], "popup": "Guatemala City", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_b31ccddc6fe861b4ce189968855b48ad);
+        
+    
+            var marker_cluster_6fc10df411ce8a3d0e3d8227985503b6 = L.markerClusterGroup(
+                {"location": [23.6585116, -102.0077097], "popup": "Mexico", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_6fc10df411ce8a3d0e3d8227985503b6);
+        
+    
+            var marker_cluster_ffcab8f8b778ca513584655e5863b14f = L.markerClusterGroup(
+                {"location": [10.2956991, -84.5698857], "popup": "Las Rocas", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_ffcab8f8b778ca513584655e5863b14f);
+        
+    
+            var marker_cluster_9f22423cb94f4b4e232db4214ceeae1a = L.markerClusterGroup(
+                {"location": [32.33529675, -117.05520157564999], "popup": "Rosarito Beach", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_9f22423cb94f4b4e232db4214ceeae1a);
+        
+    
+            var marker_cluster_6a45fd21d424f693c530dd872bf15156 = L.markerClusterGroup(
+                {"location": [35.2566192, -118.036497], "popup": "Southern California", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_6a45fd21d424f693c530dd872bf15156);
+        
+    
+            var marker_cluster_01abfd4892068aa375eaf8991078f5b4 = L.markerClusterGroup(
+                {"location": [51.1998232, 3.1888377553583487], "popup": "Jan.14", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_01abfd4892068aa375eaf8991078f5b4);
+        
+    
+            var marker_cluster_66f3b53762a3db048d2e1de52ecdac90 = L.markerClusterGroup(
+                {"location": [34.0536909, -118.242766], "popup": "Los Angeles", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_66f3b53762a3db048d2e1de52ecdac90);
+        
+    
+            var marker_cluster_a2862905c199c8e9c8f2acaced1b8dd0 = L.markerClusterGroup(
+                {"location": [36.7014631, -118.755997], "popup": "California", "radius": 10}
+            );
+            map_09f0ac2a76fa8c1693809659c631a486.addLayer(marker_cluster_a2862905c199c8e9c8f2acaced1b8dd0);
+        
+    
+            var heat_map_2169b3611afe823d0cb6f64112a02244 = L.heatLayer(
+                [[38.8890009, -77.0002537], [40.7127281, -74.0060152], [38.8950368, -77.0365427], [40.74894605, -73.96808510715785], [33.7911012, -118.3012604], [7.9631123, -11.7636869], [-23.9335988, -46.3286399], [40.7135078, -73.8283132], [40.85149705, -73.0994258107431], [-10.3333333, -53.2], [38.8950368, -77.0365427], [40.7135078, -73.8283132], [38.9597594, 34.9249653], [34.6401861, 39.0494106], [29.6330078, -97.98859404468138], [45.219131, -96.635617], [38.8950368, -77.0365427], [31.2638905, -98.5456116], [18.4968173, -69.8908822], [34.0536909, -118.242766], [15.5855545, -90.345759], [40.6526006, -73.9497211], [22.549334, -83.8991973], [48.684055799999996, 9.009657397144327], [39.7837304, -100.445882], [41.6500201, -72.7342163], [14.6222328, -90.5185188], [23.6585116, -102.0077097], [10.2956991, -84.5698857], [32.33529675, -117.05520157564999], [35.2566192, -118.036497], [51.1998232, 3.1888377553583487], [34.0536909, -118.242766], [36.7014631, -118.755997]],
+                {"blur": 15, "gradient": {"0.1": "blue", "0.3": "lime", "0.5": "yellow", "0.7": "orange", "1": "red"}, "maxOpacity": 0.9, "maxZoom": 18, "minOpacity": 0.05, "radius": 25, "useLocalExtrema": false}
+            ).addTo(map_09f0ac2a76fa8c1693809659c631a486);
+        
+</script>
+</html>

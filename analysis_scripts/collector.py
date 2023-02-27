@@ -1,7 +1,7 @@
 import datetime
 
 import newspaper
-from newspaper import news_pool, Config
+from newspaper import news_pool, Config, Article
 import time
 
 
@@ -38,3 +38,7 @@ def get_newspaper_articles():
     paper = newspaper.build("https://www.cbsnews.com/", config=get_config())
     articles = paper.articles
     return articles
+
+def create_single_paper(url):
+    article = Article(url)
+    return article

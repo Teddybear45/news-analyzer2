@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>News Analyzer - Single Beta</title>
+    <meta id="geo-data" data-lat="{{lat}}" data-lon="{{lon}}">
+
+
+</head>
+<body>
+<h1>News Analyzer Single</h1>
+
+<strong>{{summary}}
+</strong>
+<br>
+<hr>
+{{loc}}
+<div id="mapdiv" style="width:400px;height:400px"></div>
+<script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<script>
+    map = new OpenLayers.Map("mapdiv");
+    map.addLayer(new OpenLayers.Layer.OSM());
+
+    var geoData = $('#geo-data').data();
+    var lat = geoData.lat;
+    var lon = geoData.lon;
+    console.log(geoData)
+
+
+    var lonLat = new OpenLayers.LonLat(lon, lat)
+        .transform(
+            new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+            map.getProjectionObject() // to Spherical Mercator Projection
+        );
+
+    var zoom = 4;
+
+    var markers = new OpenLayers.Layer.Markers("Markers");
+    map.addLayer(markers);
+
+    markers.addMarker(new OpenLayers.Marker(lonLat));
+
+    map.setCenter(lonLat, zoom);
+</script>
+
+
+</body>
+</html>
