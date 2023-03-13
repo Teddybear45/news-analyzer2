@@ -8,8 +8,8 @@ import time
 paper_list = [
     # 'https://cnn.com',  # CNN / Separate finder
     # 'https://www.wsj.com/',  # WSJ // Not extracting
-    'https://www.cbsnews.com/news/',  # CBS
-    # 'https://apnews.com/',  # AP
+    # 'https://www.cbsnews.com/news/',  # CBS
+    'https://apnews.com/',  # AP
     # 'https://www.nytimes.com/',  # NYT
     # 'https://www.washingtonpost.com/',  # WP
     # 'https://www.bbc.com/news',  # BBC
@@ -30,12 +30,12 @@ def get_config():
     config.fetch_images = False
     config.verbose = False
     config.language = 'en'
-    config.MIN_WORD_COUNT = 500
+    config.MIN_WORD_COUNT = 400
     return config
 
 def get_newspaper_articles():
     # articles = [newspaper.build(paper, config=get_config()).articles for paper in paper_list]
-    paper = newspaper.build("https://www.cbsnews.com/", config=get_config())
+    paper = newspaper.build("https://apnews.com", config=get_config())
     articles = paper.articles
     return articles
 

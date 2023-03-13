@@ -4,6 +4,7 @@ from flask import jsonify
 app = Flask(__name__)
 
 from analysis_scripts import runner
+from analysis_scripts import collector
 import rerender
 
 
@@ -12,17 +13,26 @@ def main_page():
     # article_loc_map = runner.run_and_get_geolocs()
     # return "<div><p>Hello, World!</p><p>{}</p></div>".format(articles_urls)
     # , locData="jsonify(article_loc_map)"
-    return render_template('index.html')
+
+    articles = collector.get_newspaper_articles()
+    print(articles)
+    for a in articles:
+        print(a.title)
+
+    return render_template('index.html', articles=articles)
 
 @app.route("/", methods=['POST'])
 def main_page_post():
     url = request.form['url']
     res = runner.run_and_get_single(url)
 
-    summary = res[0]
-    coords = res[1]
-    loc = res[2]
-    return render_template('single.html', summary=summary, lon=coords[1], lat=coords[0], loc=loc)
+    title = res[0]
+    summary = res[1]
+    coords = res[2]
+    loc = res[3]
+
+    return render_template('single.html', title=title, summary=summary, lon=coords[1], lat=coords[0], loc=loc)
+
 
 # @app.route("/old_single_select")
 # def single_select():

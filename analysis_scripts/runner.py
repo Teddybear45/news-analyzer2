@@ -36,7 +36,9 @@ def run_and_get_single(url):
     article.download()
     article.parse()
     text = article.text
-    print(text)
+    title = article.title
+    summary = textSummarizer(text, 0.5)
+
 
     # Load English tokenizer, tagger, parser and NER
     nlp = spacy.load("en_core_web_sm")
@@ -50,23 +52,25 @@ def run_and_get_single(url):
         if entity.label_ == "GPE" or entity.label_ == "LOC":
             loc_entities.append(entity.text)
 
-    # select the loc that occurs the most often in the article
-    # if there are multiple, select the first one
-    # if there are none, select the first one
-    # if there are none, return None
+
+
     if not loc_entities:
-        return "NO LOCATIONS FOUND IN ARTICLE"
+        return (title, summary, (0,0), "NO LOCATION FOUND", ["No Tags"])
     else:
+        # select the loc that occurs the most often in the article
+        # if there are multiple, select the first one
+        # if there are none, select the first one
+        # if there are none, return None
         loc = max(set(loc_entities), key=loc_entities.count)
 
-    geocoder = Nominatim(user_agent='geolocator-news-analyzer')
-    geocode = RateLimiter(geocoder.geocode, min_delay_seconds=0.1, return_value_on_exception=None)
+        geocoder = Nominatim(user_agent='geolocator-news-analyzer')
+        geocode = RateLimiter(geocoder.geocode, min_delay_seconds=0.1, return_value_on_exception=None)
 
-    located_gpe = geolocator.get_locations([loc], geocode)[0][1]
+        located_gpe = geolocator.get_locations([loc], geocode)[0][1]
 
-    summary = textSummarizer(text, 0.5)
 
-    return (summary, located_gpe, loc)
+
+        return (title, summary, located_gpe, loc)
 
 
 def textSummarizer(text, percentage):

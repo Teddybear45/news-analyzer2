@@ -1,0 +1,21 @@
+.primary-secondary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 1rem 1rem;
+}
+
+.small-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.margin-top-sm {
+    margin-top: 1rem;
+}
+.margin-top-md {
+    margin-top: 2rem;
+}

@@ -47,3 +47,46 @@ h1 {
     background-image: none;
     border: 1px solid transparent;
 }
+
+.suggested-articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    overflow: hidden;
+}
+
+.suggested-article {
+    /* set the style for the suggested article grid item */
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+    .suggested-article input[type=submit] {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 100%;
+    }
+    .suggested-article input[type=submit] {
+        /* Remove border, background, and padding */
+        border: none;
+        background: none;
+        padding: 0;
+        /* Adjust font size and color */
+        font-size: 16px;
+        color: blue;
+        /* Ensure text does not wrap to next line */
+        white-space: nowrap;
+        /* Clip text and display ellipsis when it overflows */
+        text-overflow: ellipsis;
+        overflow: hidden;
+        /* Ensure input element fills width of parent container */
+        width: 100%;
+    }
+
+.source-logo {
+    width: 40%;
+    object-fit: contain;
+}

@@ -3,20 +3,42 @@
     <title>News Analyzer - Single Beta</title>
     <meta id="geo-data" data-lat="{{lat}}" data-lon="{{lon}}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/single.css') }}">
+    <link rel="stylesheet" href="../static/styles/single.css">
 
 
 </head>
 <body>
-<h1>News Analyzer Single</h1>
+<div class="primary-secondary-grid">
+    <div><h1>{{title}}</h1>
 
-<strong>{{summary}}
-</strong>
+        <strong>{{summary}}
+        </strong></div>
+
+    <div class="margin-top-md">
+        <img class="small-icon" src="https://www.svgrepo.com/show/127575/location-sign.svg" alt="">
+        <h2>
+            {{loc}}
+        </h2>
+        <div class="same-row-container"></div>
+        <div id="mapdiv" style="width:400px;height:400px"></div>
+        <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+        <h1>Tags</h1>
+
+
+
+        <h1>Keywords</h1>
+        <p>todo..</p>
+
+    </div>
+
+
+</div>
+
+
 <br>
 <hr>
-{{loc}}
-<div id="mapdiv" style="width:400px;height:400px"></div>
-<script src="http://www.openlayers.org/api/OpenLayers.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 
 <script>
     map = new OpenLayers.Map("mapdiv");
