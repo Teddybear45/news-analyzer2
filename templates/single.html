@@ -25,11 +25,11 @@
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 
         <h1>Tags</h1>
-
-
-
-        <h1>Keywords</h1>
-        <p>todo..</p>
+        {% for tag in tags %}
+            <div class="tag">
+                {{tag}}
+            </div>
+        {% endfor %}
 
     </div>
 

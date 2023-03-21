@@ -30,8 +30,9 @@ def main_page_post():
     summary = res[1]
     coords = res[2]
     loc = res[3]
+    tags = res[4]
 
-    return render_template('single.html', title=title, summary=summary, lon=coords[1], lat=coords[0], loc=loc)
+    return render_template('single.html', title=title, summary=summary, lon=coords[1], lat=coords[0], loc=loc, tags=tags)
 
 
 # @app.route("/old_single_select")
